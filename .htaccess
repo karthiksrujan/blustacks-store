@@ -1,0 +1,9 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Enforce HTTPS Redirect
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevent directory listings
+Options -Indexes

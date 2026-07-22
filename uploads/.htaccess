@@ -1,0 +1,27 @@
+# Secure uploads directory - prevent directory browsing
+Options -Indexes
+
+# Prevent execution of any scripts in the uploads directory
+<FilesMatch "\.(php|phtml|php3|php4|php5|php6|php7|php8|pl|py|jsp|asp|sh|cgi)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Override php engine to off if supported by Apache configuration
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php5.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+# Prevent MIME sniffing
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>

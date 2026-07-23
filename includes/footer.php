@@ -12,7 +12,7 @@
                 <!-- Platform Info -->
                 <div class="col-span-1 md:col-span-2">
                     <a href="<?php echo BASE_URL; ?>" class="flex items-center mb-4">
-                        <img src="<?php echo BASE_URL; ?>logo.png?v=2" alt="blustacksstore" class="h-16 w-auto dark:brightness-110">
+                        <img src="<?php echo BASE_URL; ?>logo.png?v=3" alt="blustacksstore" class="h-16 w-auto dark:brightness-110">
                     </a>
                     <p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm">
                         Discover, download, and rate premium applications. A modern store platform built for developers to publish and users to enjoy.

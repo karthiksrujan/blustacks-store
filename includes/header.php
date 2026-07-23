@@ -100,7 +100,7 @@ $current_role = get_logged_in_user_role();
     <div id="splash-screen" class="fixed inset-0 flex flex-col items-center justify-center bg-slate-950 z-[99999] transition-all duration-700 ease-in-out" style="display: none;">
         <div class="flex flex-col items-center max-w-xs md:max-w-md px-4 text-center space-y-6">
             <!-- Center Logo -->
-            <img src="<?php echo BASE_URL; ?>logo.png?v=2" alt="blustacksstore" class="w-64 md:w-80 h-auto animate-pulse brightness-110">
+            <img src="<?php echo BASE_URL; ?>logo.png?v=3" alt="blustacksstore" class="w-64 md:w-80 h-auto animate-pulse brightness-110">
             <!-- Progress Line -->
             <div class="w-32 h-1 bg-slate-800 rounded-full overflow-hidden relative">
                 <div id="splash-progress" class="absolute inset-y-0 left-0 bg-primary-500 rounded-full" style="width: 0%;"></div>
@@ -164,7 +164,7 @@ $current_role = get_logged_in_user_role();
             <!-- Brand Logo -->
             <div class="flex items-center gap-6">
                 <a href="<?php echo BASE_URL; ?>" class="flex items-center">
-                    <img src="<?php echo BASE_URL; ?>logo.png?v=2" alt="blustacksstore" class="h-12 w-auto dark:brightness-110">
+                    <img src="<?php echo BASE_URL; ?>logo.png?v=3" alt="blustacksstore" class="h-12 w-auto dark:brightness-110">
                 </a>
                 
                 <!-- Desktop Nav Navigation Links -->

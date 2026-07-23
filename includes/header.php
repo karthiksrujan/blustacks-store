@@ -40,15 +40,15 @@ $current_role = get_logged_in_user_role();
                     },
                     colors: {
                         primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0284c7',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
+                            50: '#eefcff',
+                            100: '#d7f7ff',
+                            500: '#00f0ff',
+                            600: '#00f0ff',
+                            700: '#00d6e6',
+                            800: '#00b8c7',
                         },
-                        darkBg: '#0f172a',
-                        darkCard: '#1e293b',
+                        darkBg: '#070b19',
+                        darkCard: 'rgba(16, 26, 48, 0.65)',
                     }
                 }
             }
@@ -61,6 +61,100 @@ $current_role = get_logged_in_user_role();
         .theme-transition, .theme-transition *, .theme-transition *:before, .theme-transition *:after {
             transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease, fill 0.2s ease, stroke 0.2s ease, box-shadow 0.2s ease !important;
         }
+
+        /* Glassmorphism & Neon Dark Mode Overrides */
+        .dark body {
+            background: linear-gradient(135deg, #070b19, #0d1527) !important;
+            background-attachment: fixed !important;
+            color: #f8fafc !important;
+        }
+        .dark header {
+            background-color: rgba(7, 11, 25, 0.75) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+        }
+        .dark footer {
+            background-color: #070b19 !important;
+            border-top-color: rgba(255, 255, 255, 0.05) !important;
+        }
+        
+        /* Glassmorphic Cards */
+        .dark .bg-white.dark\:bg-slate-900,
+        .dark .bg-slate-900,
+        .dark #filter-form,
+        .dark #local-search-dropdown,
+        .dark #search-autocomplete-dropdown,
+        .dark .rounded-2xl.bg-white,
+        .dark .rounded-3xl.bg-white {
+            background: rgba(16, 26, 48, 0.65) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            border-color: rgba(255, 255, 255, 0.05) !important;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+        }
+        
+        .dark .bg-white.dark\:bg-slate-900:hover,
+        .dark .bg-slate-900:hover {
+            border-color: rgba(0, 240, 255, 0.35) !important;
+            box-shadow: 0 12px 40px 0 rgba(0, 240, 255, 0.12) !important;
+        }
+        
+        /* Neon CTAs */
+        .dark .bg-primary-600,
+        .dark .bg-primary-500,
+        .dark .bg-primary-700 {
+            background: linear-gradient(135deg, #00f0ff, #00b8c7) !important;
+            color: #070b19 !important;
+            font-weight: 700 !important;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.25) !important;
+            transition: all 0.3s ease !important;
+        }
+        .dark .bg-primary-600:hover,
+        .dark .bg-primary-500:hover,
+        .dark .bg-primary-700:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.5) !important;
+            transform: translateY(-1px);
+        }
+        
+        /* Secondary Glass Buttons */
+        .dark .bg-slate-800,
+        .dark .bg-slate-800\/80,
+        .dark .bg-slate-700 {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            color: #f8fafc !important;
+        }
+        .dark .bg-slate-800:hover,
+        .dark .bg-slate-800\/80:hover,
+        .dark .bg-slate-700:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+        
+        /* Text Color Adaptability */
+        .dark .text-slate-900 {
+            color: #f8fafc !important;
+        }
+        .dark .text-slate-700 {
+            color: #cbd5e1 !important;
+        }
+        .dark .text-slate-500 {
+            color: #94a3b8 !important;
+        }
+        .dark .text-slate-400 {
+            color: #64748b !important;
+        }
+        .dark .text-slate-300 {
+            color: #cbd5e1 !important;
+        }
+        
+        .dark .border-slate-200,
+        .dark .border-slate-800,
+        .dark .border-slate-700 {
+            border-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
         /* Custom scrollbar for premium feel */
         ::-webkit-scrollbar {
             width: 8px;
@@ -70,7 +164,7 @@ $current_role = get_logged_in_user_role();
             background: transparent;
         }
         .dark ::-webkit-scrollbar-thumb {
-            background: #334155;
+            background: #1e293b;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb {
@@ -78,7 +172,7 @@ $current_role = get_logged_in_user_role();
             border-radius: 4px;
         }
         .dark ::-webkit-scrollbar-thumb:hover {
-            background: #475569;
+            background: #334155;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #94a3b8;
